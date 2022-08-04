@@ -2,11 +2,8 @@ plugins {
     id 'org.springframework.boot' version '2.7.2'
     id 'io.spring.dependency-management' version '1.0.12.RELEASE'
     id 'java'
+    id 'maven-publish'
 }
-
-group = 'com.easybytes'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '18'
 
 configurations {
     compileOnly {
@@ -14,7 +11,9 @@ configurations {
     }
 }
 
+
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
@@ -31,3 +30,28 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+tasks.withType(GenerateModuleMetadata) {
+    enabled = false
+}
+
+jar {
+    enabled = true
+    archiveClassifier = '' //use empty string
+}
+publishing {
+    publications {
+        maven(MavenPublication) {
+            group = 'com.easybytes'
+            artifactId = 'accounts'
+            version = '1.0.0'
+            from components.java
+
+            pom {
+                name = 'accounts'
+                description = 'A description of my accounts'
+            }
+        }
+    }
+}
+
