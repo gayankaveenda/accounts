@@ -1,8 +1,8 @@
-package com.easybytes.accounts.controller;
+package com.eazybytes.accounts.controller;
 
-import com.easybytes.accounts.model.Accounts;
-import com.easybytes.accounts.model.Customer;
-import com.easybytes.accounts.repository.AccountsRepository;
+import com.eazybytes.accounts.model.Accounts;
+import com.eazybytes.accounts.model.Customer;
+import com.eazybytes.accounts.repository.AccountsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -42,7 +42,7 @@ jar {
 publishing {
     publications {
         maven(MavenPublication) {
-            group = 'com.easybytes'
+            group = 'com.eazybytes'
             artifactId = 'accounts'
             version = '1.0.0'
             from components.java

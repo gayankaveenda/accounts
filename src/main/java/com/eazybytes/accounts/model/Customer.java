@@ -1,4 +1,4 @@
-package com.easybytes.accounts.model;
+package com.eazybytes.accounts.model;
 
 import lombok.Getter;
 import lombok.Setter;
