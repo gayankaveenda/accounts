@@ -7,7 +7,7 @@ import lombok.ToString;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity(name = "accounts")
 @Getter @Setter @ToString
@@ -27,5 +27,5 @@ public class Accounts {
     private String branchAddress;
 
     @Column(name = "create_dt")
-    private LocalDate createDt;
+    private Date createDt;
 }

@@ -18,7 +18,13 @@ create table `accounts` (
 );
 
 insert into `customer` (customer_id, `name`, email, mobile_number, create_dt)
-values (1, 'Easy Bytes', 'tutor@eazybytes.com','987654321', null);
+values (1, 'Easy Bytes', 'tutor@eazybytes.com','987654321', '2020-10-13');
+
+insert into `customer` (customer_id, `name`, email, mobile_number, create_dt)
+values (2, 'Drake Dusty', 'dustyd@eazybytes.com','456321245', '2021-12-18');
 
 insert into `accounts` (customer_id, account_number, account_type, branch_address, create_dt)
-values (1,1845, 'Savings', '123 Main Street NY', null);
+values (1,1845, 'Savings', '123 Main Street NY', '2022-01-05');
+
+insert into `accounts` (customer_id, account_number, account_type, branch_address, create_dt)
+values (2,2745, 'Current', '345 Gippsland Ave Clyde', '2022-04-01');
