@@ -21,12 +21,12 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
-
+version = '1.0'
 
 docker {
     name "${project.name}:${project.version}"
-    files "$buildDir/libs/${project.name}:${project.version}.jar"
-    buildArgs ([JAR_FILE:"${project.name}:${project.version}.jar"])
+    files "$buildDir/libs/${project.name}-${project.version}.jar"
+    buildArgs([JAR_FILE: "${project.name}-${project.version}.jar"])
 }
 
 dockerRun {
@@ -34,6 +34,7 @@ dockerRun {
     image "${project.name}:${project.version}"
     ports '8080:8080'
     clean true
+    daemonize false
 }
 
 
