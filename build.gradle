@@ -3,8 +3,9 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.12.RELEASE'
     id 'java'
     id 'maven-publish'
-    id 'com.palantir.docker' version '0.22.1'
-    id 'com.palantir.docker-run' version '0.22.1'
+    id 'com.palantir.docker' version '0.34.0'
+    id 'com.palantir.docker-run' version '0.34.0'
+    id 'pl.allegro.tech.build.axion-release' version '1.14.0'
 }
 
 repositories {
