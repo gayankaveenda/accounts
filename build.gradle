@@ -23,6 +23,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 version = '1.0'
+project.version = scmVersion.version
 
 docker {
     name "${project.name}:${project.version}"
