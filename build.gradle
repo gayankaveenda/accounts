@@ -5,7 +5,6 @@ plugins {
     id 'maven-publish'
     id 'com.palantir.docker' version '0.34.0'
     id 'com.palantir.docker-run' version '0.34.0'
-    id 'pl.allegro.tech.build.axion-release' version '1.14.0'
 }
 
 repositories {
@@ -23,7 +22,6 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 version = '1.0'
-project.version = scmVersion.version
 
 docker {
     name "${project.name}:${project.version}"
