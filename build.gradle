@@ -12,6 +12,21 @@ repositories {
     mavenCentral()
 }
 
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            group = 'com.eazybytes'
+            artifactId = 'accounts'
+            version = '1.0'
+            artifact bootJar
+        }
+    }
+
+    repositories {
+        mavenLocal()
+    }
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -35,36 +50,4 @@ dockerRun {
     ports '8080:8080'
     clean true
     daemonize false
-}
-
-
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
-    }
-}
-
-
-tasks.named('test') {
-    useJUnitPlatform()
-}
-
-tasks.withType(GenerateModuleMetadata) {
-    enabled = false
-}
-
-publishing {
-    publications {
-        maven(MavenPublication) {
-            group = 'com.eazybytes'
-            artifactId = 'accounts'
-            version = '1.0.0'
-            from components.java
-
-            pom {
-                name = 'accounts'
-                description = 'A description of my accounts'
-            }
-        }
-    }
 }
