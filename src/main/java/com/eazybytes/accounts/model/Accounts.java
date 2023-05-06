@@ -1,5 +1,6 @@
 package com.eazybytes.accounts.model;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -10,7 +11,7 @@ import javax.persistence.Id;
 import java.util.Date;
 
 @Entity(name = "accounts")
-@Getter @Setter @ToString
+@Data
 public class Accounts {
 
     @Column(name = "customer_id")
